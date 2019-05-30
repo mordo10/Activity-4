@@ -1,0 +1,63 @@
+<div>
+	<strong>Name</strong>
+	<%= @grade.name%>
+	<%@grade.name%>
+</div>
+
+
+<div>
+	<strong>Course</strong>
+	<%= @grade.course%>
+	<%@grade.course%>
+</div>
+
+<div>
+	<strong>ID Number</strong>
+	<%= @grade.id_number%>
+	<%@grade.id_number%>
+</div>
+
+<div>
+	<strong>Prelim</strong>
+	<%= @grade.prelim%>
+	<%@grade.prelim%>
+</div>
+
+<div>
+	<strong>Midterm</strong>
+	<%= @grade.midterm%>
+	<%@grade.midterm%>
+</div>
+
+<div>
+	<strong>Prefinal</strong>
+	<%= @grade.prefinal%>
+	<%@grade.prefinal%>
+</div>
+
+<%= @grades.each do |grade| %>
+    <p>
+	<a href="/grades/<%=grade.name%>">
+	    <%=grade.name%>
+	</a>
+    </p>
+<%end%>
+
+<tbody>
+   <%@grades.each do |grade|%>
+	<tr>
+	   <td><%= grade.name%></td>
+	   <td><%= grade.course%></td>
+	   <td><%= grade.id_number%></td>
+	   <td><%= grade.prelim%></td>
+	   <td><%= grade.midterm%></td>
+	   <td><%= grade.prefinal%></td>
+	   <td><%= grade.final%></td>
+	<td><%= link_to 'show'.grade%></td>
+	</tr>
+	<%end%>
+</tbody>
+
+
+
+
